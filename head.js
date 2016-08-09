@@ -130,7 +130,7 @@
         "rgb(133,67,255)"       :  "몸빵 업그레이드",
         "rgb(67,127,255)"       :  "총알 속도 업그레이드",
         "rgb(255,222,67)"     :  "관통력 업그레이드",
-        "rgb(255,67,67)"       :  "공경력 업그레이드",
+        "rgb(255,67,67)"       :  "공격력 업그레이드",
         "rgb(130,255,67)"       :  "장전 속도 업그레이드",
         "rgb(67,255,249)"     :  "이동 속도 업그레이드",
         "rgb(241,119,221)"   :  "정찰병",
@@ -959,8 +959,17 @@ function translateText(c){
 		case "Diep.io":
 			c="Diep.io";
 			break;
-		case "The SW Dominator is being contested":
-			c="남서쪽 점령지가 점령되고 있습니다 ";
+		case "they seem to prefer to keep an air of mystery about them":
+			c="Diep.io";
+			break;
+		case "Level":
+			c="레벨";
+			break;
+		case "Time Alive":
+			c="살아남은 시간";
+			break;
+		case "press enter to continue":
+			c="계속하려면 엔터";
 			break;
 	}
 	c = c.replace(/Game mode/g,"게임 모드");
