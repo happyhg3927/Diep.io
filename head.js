@@ -27,6 +27,7 @@
     var __shadowHost;
     var __fillText;
     var __strokeText;
+    var __measureText;
     var __focus;
     var __fillStyle;
     var __strokeStyle;
@@ -300,6 +301,11 @@
         if(arguments[0].indexOf("players")!=-1) return;
         arguments[0]=translateText(arguments[0]);
         _strokeText.apply(this, arguments);
+    };
+    
+    _cp.measureText=__measureText=function(){
+        arguments[0]=translateText(arguments[0]);
+        __measureText.apply(this, arguments);
     };
 
 
