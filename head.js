@@ -92,8 +92,8 @@
             originalColors: {},
             darkColors: {},
             json: {
-                "author": "Gall Anonim",
-                "name" : "Custom Theme",
+                "author": "멍보",
+                "name" : "커스텀 테마",
                 "dictionary" : {},
                 "replaced" :{}
             },
@@ -110,7 +110,7 @@
     };
 
     game.theme.originalColors = {
-        "rgb(205,205,205)"   :  "background",
+        "rgb(205,205,205)"   :  "바탕색",
         "rgb(252,118,119)"   :  "triangles",
         "rgb(153,153,153)"   :  "foo1",
         "rgb(0,178,225)"       :  "cell",
@@ -144,7 +144,7 @@
 
 
     game.theme.darkColors = {
-        "background"          :   "rgb(20,20,20)",
+        "바탕색"          :   "rgb(20,20,20)",
         "bullet"                    :   "rgb(230, 10, 10)",
         "squares"                 :   "rgb(230, 1, 1)",
         "cell"                        :  "rgb(255, 102, 0)",
@@ -676,7 +676,7 @@
 
     function createCustomThemePopup(){
 
-        customThemePopup = createElement("div", {"class": "custom-theme-popup"}, `<div class="nav"><a class="tab">Editor</a><a class="tab">JSON</a><a class="tab">Templates</a><a>Save</a><a>Restore</a><a></a></div>
+        customThemePopup = createElement("div", {"class": "custom-theme-popup"}, `<div class="nav"><a class="tab">에디터</a><a class="tab">소스</a><a class="tab">템플렛</a><a>저장</a><a>되돌리기</a><a></a></div>
             <div class="custom-theme-body my-scroll"><div class="custom-theme-table"></div><div class="custom-theme-json"><textarea></textarea></div><div class="custom-theme-templates"><ul class="my-ul"></ul></div></div><a class="close"></a>`);
 
 
@@ -773,8 +773,8 @@
                     tmp = JSON.parse(tmp);
                     if(tmp["dictionary"] && tmp["replaced"]) game.theme.json = tmp;
                     else{
-                        game.theme.json["author"] = "Gall Anonim";
-                        game.theme.json["name"] = "Custom Theme";
+                        game.theme.json["author"] = "멍보";
+                        game.theme.json["name"] = "커스텀 테마";
                         game.theme.json["dictionary"] = game.theme.originalColors;
                         game.theme.json["replaced"] = {};
                     }
