@@ -676,7 +676,7 @@
 
     function createCustomThemePopup(){
 
-        customThemePopup = createElement("div", {"class": "custom-theme-popup"}, `<div class="nav"><a class="tab">에디터</a><a class="tab">소스</a><a class="tab">템플렛</a><a>저장</a><a>되돌리기</a><a></a></div>
+		customThemePopup = createElement("div", {"class": "custom-theme-popup"}, `<div class="nav"><a class="tab">에디터</a><a class="tab">소스</a><a class="tab">템플렛</a><a>저장</a><a>되돌리기</a><a></a></div>
             <div class="custom-theme-body my-scroll"><div class="custom-theme-table"></div><div class="custom-theme-json"><textarea></textarea></div><div class="custom-theme-templates"><ul class="my-ul"></ul></div></div><a class="close"></a>`);
 
 

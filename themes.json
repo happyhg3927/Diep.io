@@ -1,6 +1,6 @@
 [{
-  "author" : "terjanq",
-  "name" : "Ghost Town",
+  "author" : "멍보",
+  "name" : "유령 도시",
   "dictionary" : {
     "rgb(205,205,205)" : "background",
     "rgb(252,118,119)" : "triangles",
@@ -62,8 +62,8 @@
     "leaderboardStroke" : "rgba(63,250,141,0.5)"
   }
 }, {
-  "author" : "terjanq",
-  "name" : "Dark Theme2",
+  "author" : "한울",
+  "name" : "어두운 테마 2",
   "dictionary" : {
     "rgb(205,205,205)" : "background",
     "rgb(252,118,119)" : "triangles",
@@ -119,8 +119,8 @@
     "redTeam" : "#ffa200"
   }
 }, {
-  "author" : "terjanq",
-  "name" : "Dark Theme (beta)",
+  "author" : "멍보",
+  "name" : "어두운 테마 베타",
   "dictionary" : {
     "rgb(205,205,205)" : "background",
     "rgb(252,118,119)" : "triangles",
@@ -174,8 +174,8 @@
     "defaultStroke" : "rgb(255,255,255)"
   }
 }, {
-  "author" : "terjanq",
-  "name" : "Sad World",
+  "author" : "멍보",
+  "name" : "슬픈 세계",
   "dictionary" : {
     "rgb(205,205,205)" : "background",
     "rgb(252,118,119)" : "triangles",
