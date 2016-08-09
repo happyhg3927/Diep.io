@@ -14,4 +14,4 @@ Extension for Diep.io game
 4. Open [diep.io](http://diep.io) tab :)
 
 
-Website: [ÇÑ±¹´ÙÀÌÇÇ¿ÀÄ¿¹Â´ÏÆ¼](http://cafe.naver.com/diepio)
+Website: [í•œêµ­ ë‹¤ì´í”¼ì˜¤ ì»¤ë®¤ë‹ˆí‹°](http://cafe.naver.com/diepio)
