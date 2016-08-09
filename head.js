@@ -291,13 +291,14 @@
 
         if(arguments[0].indexOf("Diep.io")!=-1) return;
         if(arguments[0].indexOf("players")!=-1) return;
-
+        arguments[0]=translateText(arguments[0]);
         _fillText.apply(this, arguments);
     };
 
     _cp.strokeText= __strokeText = function() {
         if(arguments[0].indexOf("Diep.io")!=-1) return;
         if(arguments[0].indexOf("players")!=-1) return;
+        arguments[0]=translateText(arguments[0]);
         _strokeText.apply(this, arguments);
     };
 
@@ -876,6 +877,123 @@
             el.style.left = (e.clientX -dx) + 'px';
         }
     }
+function translateText(c){
+	switch(c){
+		case "This is the tale of...":
+			c="닉네임 입력";
+			break;
+		case "Changelog":
+			c="변경사항";
+			break;
+		case "(press enter to spawn)":
+			c="(엔터 누르면 시작)";
+			break;
+		case "press [TAB] to switch":
+			c="탭키로 모드 변경";
+			break;
+		case "Connecting...":
+			c="연결중...";
+			break;
+		case "Health Regen":
+			c="회복 속도";
+			break;
+		case "Max Health":
+			c="최대 채력";
+			break;
+		case "Body Damage":
+			c="몸빵";
+			break;
+		case "Bullet Speed":
+			c="공격 속도";
+			break;
+		case "Bullet Penetration":
+			c="관통력";
+			break;
+		case "Bullet Damage":
+			c="공격력";
+			break;
+		case "Reload":
+			c="장전 속도";
+			break;
+		case "Movement Speed":
+			c="이동 속도";
+			break;
+		case "Twin":
+			c="트윈";
+			break;
+		case "Sniper":
+			c="스나이퍼";
+			break;
+		case "Machine Gun":
+			c="기관총";
+			break;
+		case "Flank Guard":
+			c="플랭크 가드";
+			break;
+		case "RED HAS WON THE GAME!":
+			c="빨강팀이 이겼습니다!";
+			break;
+		case "BLUE HAS WON THE GAME!":
+			c="파랑팀이 이겼습니다!";
+			break;
+		case "Ignore":
+			c="무시";
+			break;
+		case "Upgrades":
+			c="전직";
+			break;
+		case "Arena closed: No players can join":
+			c="서버 닫힘: 접속이 불가능 합니다.";
+			break;
+		case "Leader":
+			c="1등";
+			break;
+		case "Diep.io":
+			c="Diep.io";
+			break;
+		case "The SW Dominator is being contested":
+			c="남서쪽 점령지가 점령되고 있습니다 ";
+			break;
+	}
+	c = c.replace(/Game mode/g,"게임 모드");
+	c = c.replace(/FFA/g,"개인전");
+	c = c.replace(/Team DM/g,"팀 점령전");
+	c = c.replace(/Domination/g,"점령전");
+	c = c.replace(/Last updated/g,"최근 업데이트");
+	c = c.replace(/Score:/g,"점수:");
+	c = c.replace(/Scoreboard/g,"순위");
+	c = c.replace(/Lvl/g,"레벨");
+	c = c.replace(/players/g,"명 접속중");
+	if(/You will spawn at level/g.test(c)){
+		c = c.replace(/You will spawn at level/g,"");
+		c+="레벨로 시작합니다.";
+	}
+	if(/Dominator is being contested/g.test(c)){
+		c = c.replace(/Dominator is being contested/g," 점령지가 점령되고 있습니다");
+		c = c.replace(/The SW/g,"남서쪽");
+		c = c.replace(/The NW/g,"북서쪽");
+		c = c.replace(/The SE/g,"남동쪽");
+		c = c.replace(/The NE/g,"북동쪽");
+	}
+	if(/Dominator is now controlled by/g.test(c)){
+		c = c.replace(/The SW/g,"남서쪽");
+		c = c.replace(/The NW/g,"북서쪽");
+		c = c.replace(/The SE/g,"남동쪽");
+		c = c.replace(/The NE/g,"북동쪽");
+		c = c.replace(/Dominator is now controlled by/g," 점령지가 ");
+		c = c.replace(/BLUE/g,"빨강팀");
+		c = c.replace(/RED/g,"파랑팀");
+		c += " 에 의해 점령되었습니다."
+	}
+	if(/Auto Fire/g.test(c)){
+		c = c.replace(/Auto Fire/g,"자동 쏘기");
+		c = c.replace(/ON/g,"켜짐");
+		c = c.replace(/OFF/g,"꺼짐");
+	}
+	//c = c.replace(//g,"");
+	return c;
+}
+
 
     document.currentScript.remove();
 })();
