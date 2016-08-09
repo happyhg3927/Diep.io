@@ -2,7 +2,7 @@
 // @name         Diep.io (github)
 // @description  Diep.io extension (sectored-minimap, zoom, play-with-friends, custom-theming, kill counter)
 // @version      3.0
-// @author       MungBo
+// @author       MungBo, Ganggroid
 // @match        http://diep.io/
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
