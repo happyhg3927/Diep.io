@@ -13,12 +13,12 @@
     var _focus = _hp.focus;
     var _fillText = _cp.fillText;
     var _strokeText = _cp.strokeText;
+    var _measureText = _cp.measureText;
     var _fillStyle = _cp.__lookupSetter__('fillStyle');
     var _strokeStyle = _cp.__lookupSetter__('strokeStyle');
     var _scale = _cp.scale;
     var _translate = _cp.translate;
     var _strokeRect = _cp.strokeRect;
-    var _measureText = _cp.measureText;
     var _setTransform = _cp.setTransform;
     var _setTyping;
 
@@ -307,7 +307,7 @@
     
     _cp.measureText=__measureText=function(){
         arguments[0]=translateText(arguments[0]);
-        _measureText.apply(this, arguments);
+        return _measureText.apply(this, arguments);
     };
 
 
