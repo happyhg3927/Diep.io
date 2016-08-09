@@ -18,6 +18,7 @@
     var _scale = _cp.scale;
     var _translate = _cp.translate;
     var _strokeRect = _cp.strokeRect;
+    var _measureText = _cp.measureText;
     var _setTransform = _cp.setTransform;
     var _setTyping;
 
