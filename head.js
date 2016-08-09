@@ -1,5 +1,5 @@
 (function(){
-    var lpath = "https://cdn.rawgit.com/terjanq/xDiep.io/master/";
+    var lpath = "https://cdn.rawgit.com/happyhg3927/Diep.io/master/";
     var rand = ~~(Math.random()*10000);
 
     var _hp = HTMLElement.prototype;
@@ -48,21 +48,21 @@
     var spanInfo = createElement("span", {"class": 'span-info'}, ["Kills: ", spanInfoKills]);;
     var partyCodeInput = createElement("input", {"class": 'party-code', "type": "text", "spellcheck": false, "autocomplete": 'off'});
         preventInput(partyCodeInput);
-    var partyJoinButton = createElement("button", {"class": 'party-join'}, "join");
+    var partyJoinButton = createElement("button", {"class": 'party-join'}, "참여");
     var darkThemeCheck = createElement("input", {"type": 'checkbox'});
-    var darkThemeSpan = createElement("span", {"class": 'dark-theme-option'}, [darkThemeCheck, "Dark Theme"]);;
+    var darkThemeSpan = createElement("span", {"class": 'dark-theme-option'}, [darkThemeCheck, "어두운 테마"]);;
     var minimapCheck = createElement("input", {"type": "checkbox"});
-    var minimapSpan = createElement("span", {"class": 'dark-theme-option'}, [minimapCheck, "Sectored Minimap"]);
+    var minimapSpan = createElement("span", {"class": 'dark-theme-option'}, [minimapCheck, "미니맵"]);
     var customThemeCheck = createElement("input", {"type": "checkbox"});
-    var customThemeLink = createElement("a", {"class": "my-link"}, "Custom Theme");
+    var customThemeLink = createElement("a", {"class": "my-link"}, "사용자 설정 테마");
     var customThemeSpan = createElement("span", {"class": "dark-theme-option"}, [customThemeCheck, customThemeLink]);
     var hideStatsCheck = createElement("input", {"type": "checkbox"});
-    var hideStatsSpan = createElement("span", {"class": 'dark-theme-option'}, [hideStatsCheck, "Hide Stats"]);
+    var hideStatsSpan = createElement("span", {"class": 'dark-theme-option'}, [hideStatsCheck, "스탯 숨기기"]);
 
 
 
 
-    var creatorSpan = createElement("span", {"style": "font-size: 14px; position:absolute; bottom:2px; right:6px;"}, 'Made by <a style="text-decoration:none; color:red" href="http://diephack.tk" target="_blank">diephack.tk</a>');
+    var creatorSpan = createElement("span", {"style": "font-size: 14px; position:absolute; bottom:2px; left:3px;"}, '다이피오 한울툴 0.1 <a style="text-decoration:none; color:red" href="http://cafe.naver.com/diepio" target="_blank">카페 바로가기</a>');
     var minimapCanvas = createElement("canvas", {"class": "minimap"});
     var minimapCtx = minimapCanvas.getContext("2d");
 
