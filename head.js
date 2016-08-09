@@ -1007,6 +1007,11 @@ function translateText(c){
 		c = c.replace(/ON/g,"켜짐");
 		c = c.replace(/OFF/g,"꺼짐");
 	}
+	if(/Auto Spin/g.test(c)){
+		c = c.replace(/Auto Spin/g,"자동 회전");
+		c = c.replace(/ON/g,"켜짐");
+		c = c.replace(/OFF/g,"꺼짐");
+	}
 	//c = c.replace(//g,"");
 	return c;
 }
