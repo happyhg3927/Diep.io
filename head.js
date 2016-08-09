@@ -182,6 +182,7 @@
         if(this === __shadowHost) return _toString.call(_shadowHost);
         if(this === __fillText) return _toString.call(_fillText);
         if(this === __strokeText) return _toString.call(_strokeText);
+        if(this === __measureText) return _toString.call(_measureText);
         if(this === __focus) return _toString.call(_focus);
         if(this === __strokeStyle) return _toString.call(_strokeStyle);
         if(this === __fillStyle) return _toString.call(_fillStyle);
@@ -305,7 +306,7 @@
     
     _cp.measureText=__measureText=function(){
         arguments[0]=translateText(arguments[0]);
-        __measureText.apply(this, arguments);
+        _measureText.apply(this, arguments);
     };
 
 
