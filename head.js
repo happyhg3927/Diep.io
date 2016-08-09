@@ -1097,6 +1097,7 @@
 		c = c.replace(/Time Alive/g, "살아남은 시간");
 		c = c.replace(/press enter to continue/g, "계속하려면 엔터");
 		c = c.replace(/they seem to prefer to keep an air of mystery about them/g, "they seem to prefer to keep an air of mystery about them");
+		c = c.replace(/You were killed by:/g,"당신을 죽인 탱크는");
 
 		if (/You will spawn at level/g.test(c)) {
 			c = c.replace(/You will spawn at level/g, "");
