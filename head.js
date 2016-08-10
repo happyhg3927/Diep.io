@@ -1050,18 +1050,90 @@
 			case "Movement Speed":
 				c = "이동 속도";
 				break;
+			// Twin
 			case "Twin":
 				c = "트윈";
 				break;
+			case "Twin Flank":
+				c = "트윈 플랭크";
+				break;
+			case "Quad Tank":
+				c = "쿼드 탱크";
+				break;
+			case "Triple Shot":
+				c = "트리플 샷";
+				break;
+			case "Triple Twin":
+				c = "트리플 트윈";
+				break;
+			case "Octo Tank":
+				c = "옥토 탱크";
+				break;
+			case "Triplet":
+				c = "트랩랫";
+				break;
+			case "Penta Shot":
+				c = "펜타샷";
+				break;
+			//Sniper
 			case "Sniper":
 				c = "스나이퍼";
 				break;
-			case "Machine Gun":
-				c = "기관총";
+			case "Assassin":
+				c = "어쌔신";
 				break;
+			case "Overseer":
+				c = "오버씨어";
+				break;
+			case "Hunter":
+				c = "헌터";
+				break;
+			case "Ranger":
+				c = "레인저";
+				break;
+			case "Stalker":
+				c = "스토커";
+				break;
+			case "Overload":
+				c = "오버로드";
+				break;
+			case "Nacromancer":
+				c = "네크로맨서";
+				break;
+			case "Manager":
+				c = "매니저";
+				break;
+			//Machine Gun
+			case "Machine Gun":
+				c = "머신건";
+				break;
+			case "Destroyer":
+				c = "디스트로이어";
+				break;
+			case "Gunner":
+				c = "거너";
+				break;
+			//Flank Guard
 			case "Flank Guard":
 				c = "플랭크 가드";
 				break;
+			case "Tri-Angle":
+				c = "트라이앵글";
+				break;
+			case "Fighter":
+				c = "파이터";
+				break;
+			case "Booster":
+				c = "부스터";
+				break;
+			//Auto
+			case "Auto 3":
+				c = "오토 3";
+				break;
+			case "Auto 5":
+				c = "오토 5";
+				break;
+			//========
 			case "RED HAS WON THE GAME!":
 				c = "빨강팀이 이겼습니다!";
 				break;
@@ -1121,7 +1193,7 @@
 			c += " 에 의해 점령되었습니다."
 		}
 		if (/Auto Fire/g.test(c)) {
-			c = c.replace(/Auto Fire/g, "자동 쏘기");
+			c = c.replace(/Auto Fire/g, "자동 사격");
 			c = c.replace(/ON/g, "켜짐");
 			c = c.replace(/OFF/g, "꺼짐");
 		}
