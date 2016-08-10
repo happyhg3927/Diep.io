@@ -91,6 +91,13 @@
 	var hideStatsSpan = createElement("span", {
 		"class": 'dark-theme-option'
 	}, [hideStatsCheck, "스탯 숨기기"]);
+	var zoomCheck = createElement("input", {
+		"type": "checkbox"
+	});
+	var zoomSpan = createElement("span", {
+		"class": 'dark-theme-option'
+	}, [zoomCheck, "줌 기능 끄기"]);
+	
 
 
 
@@ -111,6 +118,7 @@
 	welcomeDiv.appendChild(minimapSpan);
 	welcomeDiv.appendChild(customThemeSpan);
 	welcomeDiv.appendChild(hideStatsSpan);
+	welcomeDiv.appendChild(zoomSpan);
 	welcomeDiv.appendChild(creatorSpan);
 
 
@@ -140,6 +148,7 @@
 			minimap: false
 		},
 		zoom: 1.0,
+		disableZoom: false,
 		hideStats: false,
 		boardLength: -12500,
 		started: false,
@@ -529,10 +538,12 @@
 	}
 
 	function WheelHandler(event) {
-		var zoom = game.zoom * Math.pow(0.93, event.wheelDelta / -120 || event.detail || 0);
-		game.zoom = zoom;
-		if (zoom < 0.7) game.zoom = 0.7;
-		if (zoom > 1.0) game.zoom = 1.0;
+		if (!game.disableZoom) {
+			var zoom = game.zoom * Math.pow(0.93, event.wheelDelta / -120 || event.detail || 0);
+			game.zoom = zoom;
+			if (zoom < 0.7) game.zoom = 0.7;
+			if (zoom > 1.0) game.zoom = 1.0;
+		}
 	}
 
 	function rgbToHex(col) {
@@ -666,6 +677,10 @@
 	hideStatsCheck.onchange = function() {
 		game.hideStats = hideStatsCheck.checked;
 	};
+	
+	zoomCheck.onchange = function() {
+		game.disableZoom = zoomCheck.checked;
+	}
 
 
 
