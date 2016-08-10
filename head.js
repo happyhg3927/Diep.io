@@ -1208,8 +1208,8 @@
 			c = c.replace(/s/g, "초");
 		}
 		if (/You've killed/g.test(c)) {
-			c = c.replace(/Time Alive/g, "");
-			c += " 탱크를 죽였습니다.";
+			c = c.replace(/You've killed/g, "[");
+			c += "] 탱크를 죽였습니다.";
 		}
 		//c = c.replace(//g,"");
 		return c;
