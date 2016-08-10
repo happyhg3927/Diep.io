@@ -680,7 +680,7 @@
 	
 	zoomCheck.onchange = function() {
 		game.disableZoom = zoomCheck.checked;
-	}
+	};
 
 
 
