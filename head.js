@@ -1166,7 +1166,7 @@
 		c = c.replace(/Lvl/g, "레벨");
 		c = c.replace(/players/g, "명 접속중");
 		c = c.replace(/Level/g, "레벨");
-		c = c.replace(/Time Alive/g, "살아남은 시간");
+		//c = c.replace(/Time Alive/g, "살아남은 시간");
 		c = c.replace(/press enter to continue/g, "계속하려면 엔터");
 		c = c.replace(/they seem to prefer to keep an air of mystery about them/g, "they seem to prefer to keep an air of mystery about them");
 		c = c.replace(/You were killed by:/g,"당신을 죽인 탱크는");
@@ -1201,6 +1201,11 @@
 			c = c.replace(/Auto Spin/g, "자동 회전");
 			c = c.replace(/ON/g, "켜짐");
 			c = c.replace(/OFF/g, "꺼짐");
+		}
+		if (/Time Alive/g.test(c)) {
+			c = c.replace(/Time Alive/g, "살아남은 시간");
+			c = c.replace(/m/g, "분");
+			c = c.replace(/s/g, "초");
 		}
 		//c = c.replace(//g,"");
 		return c;
