@@ -415,24 +415,29 @@
 	};
 
 	_cp.setTransform = __setTransform = function() {
+			
+		if(this.canvas.parentElement === document.body && this.canvas != minimapCanvas && arguments[0]<window.innerWidth) {
+			var x = (window.innerWidth - window.innerWidth*game.zoom)/2;
+            var y = (window.innerHeight - window.innerHeight*game.zoom)/2;
 
-		if (this.canvas.parentElement === document.body && this.canvas != minimapCanvas && arguments[0] < window.innerWidth) {
-			var x = (window.innerWidth - window.innerWidth * game.zoom) / 2;
-			var y = (window.innerHeight - window.innerHeight * game.zoom) / 2;
-
-			arguments[0] = gameScale(arguments[0]);
-			arguments[1] *= game.zoom;
-			arguments[2] *= game.zoom;
-			arguments[3] = gameScale(arguments[3]);
-			arguments[4] = arguments[4] * game.zoom + x;
-			arguments[5] = arguments[5] * game.zoom + y;
-
-
+            arguments[0] = gameScale(arguments[0]);
+            arguments[1] *= game.zoom;
+            arguments[2] *= game.zoom;
+            arguments[3] = gameScale(arguments[3]);
+            arguments[4] = arguments[4]*game.zoom + x;
+            arguments[5] = arguments[5]*game.zoom + y;
 		}
 		return _setTransform.apply(this, arguments);
 	};
 
-
+	
+	var _temp = _cp.drawImage;
+	
+	_cp.drawImage = function() {
+		return _temp.apply(this,arguments);
+	}
+	
+/**
 	window.WebSocket = __WS = function(url, protocol) {
 		var s = new _WS(url, protocol);
 		s.addEventListener("message", function(e) {
@@ -444,7 +449,7 @@
 		}, true);
 		return s
 	};
-
+**/
 
 	// _ws.__defineSetter__("onmessage", function(data){
 	//     console.log(data);
@@ -780,8 +785,6 @@
 		minimapCanvas.style.backgroundImage = "url(" + minimapCanvas.toDataURL() + ")";
 
 	}
-
-
 
 
 	function createCustomThemePopup() {
