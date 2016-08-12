@@ -271,7 +271,7 @@
 
 	function onBodyStart(e) {
 		myDoc = e.createShadowRoot();
-		myDoc.innerHTML = `<content select="link"></content><content select="#fontdetectHelper"></content><content select="span"></content><content select="#canvas"></content><content select="#textInputContainer"></content><style> @import "` + lpath + `xdiep.css"; </style>`;
+		myDoc.HTML = `<content select="link"></content><content select="#fontdetectHelper"></content><content select="span"></content><content select="#canvas"></content><content select="#textInputContainer"></content><style> @import "` + lpath + `xdiep.css"; </style>`;
 		// <iframe id='_ga' class="ga" src="`+lpath+`ga.html"></iframe>`;
 	}
 
@@ -1224,6 +1224,7 @@
 			c = c.replace(/Time Alive/g, "살아남은 시간");
 			c = c.replace(/m/g, "분");
 			c = c.replace(/s/g, "초");
+			alert(canvas.innerHtml);
 		}
 		if (/You've killed /g.test(c)) {
 			c = c.replace(/You've killed /g, "[");
