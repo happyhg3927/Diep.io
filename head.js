@@ -1224,7 +1224,6 @@
 			c = c.replace(/Time Alive/g, "살아남은 시간");
 			c = c.replace(/m/g, "분");
 			c = c.replace(/s/g, "초");
-			alert(canvas.innerHtml);
 		}
 		if (/You've killed /g.test(c)) {
 			c = c.replace(/You've killed /g, "[");
