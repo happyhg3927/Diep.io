@@ -271,7 +271,7 @@
 
 	function onBodyStart(e) {
 		myDoc = e.createShadowRoot();
-		myDoc.HTML = `<content select="link"></content><content select="#fontdetectHelper"></content><content select="span"></content><content select="#canvas"></content><content select="#textInputContainer"></content><style> @import "` + lpath + `xdiep.css"; </style>`;
+		myDoc.innerHTML = `<content select="link"></content><content select="#fontdetectHelper"></content><content select="span"></content><content select="#canvas"></content><content select="#textInputContainer"></content><style> @import "` + lpath + `xdiep.css"; </style>`;
 		// <iframe id='_ga' class="ga" src="`+lpath+`ga.html"></iframe>`;
 	}
 
