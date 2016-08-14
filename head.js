@@ -1229,6 +1229,12 @@
 			c = c.replace(/You've killed /g, "[");
 			c += "] 탱크를 죽였습니다.";
 		}
+		c = c.replace(/BLUE/g,"파랑팀");
+		c = c.replace(/RED/g,"빨강팀");
+		
+		//Update Log Translate
+		c = c.replace(/You can now open the class tree by holding down Y/g,"이제 Y키를 눌러서 클래스 트리를 열 수 있습니다.");
+		c = c.replace(/Tweaked the"spawn at half your previous level"mechanic/g,'"전 레벨의 반으로 스폰"기술을 수정했습니다.');
 		//c = c.replace(//g,"");
 		return c;
 	}
