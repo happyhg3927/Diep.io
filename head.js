@@ -1241,7 +1241,7 @@
 		
 		//Update Log Translate
 		c = c.replace(/You can now open the class tree by holding down Y/g,"이제 Y키를 눌러서 클래스 트리를 열 수 있습니다.");
-		c = c.replace(/Tweaked the"spawn at half your previous level"mechanic/g,'"전 레벨의 반으로 스폰"기술을 수정했습니다.');
+		c = c.replace(/Tweaked the "spawn at half your previous level" mechanic/g,'"죽기전 레벨의 반으로 스폰"기술을 수정했습니다.');
 		//c = c.replace(//g,"");
 		return c;
 	}
