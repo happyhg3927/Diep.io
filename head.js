@@ -1178,6 +1178,7 @@
 		c = c.replace(/FFA/g, "개인전");
 		c = c.replace(/Team DM/g, "팀 점령전");
 		c = c.replace(/Domination/g, "점령전");
+		c = c.replace(/Mothership/g, "모선전");
 		c = c.replace(/Last updated/g, "최근 업데이트");
 		c = c.replace(/Score:/g, "점수:");
 		c = c.replace(/Scoreboard/g, "순위");
@@ -1206,9 +1207,15 @@
 			c = c.replace(/The SE/g, "남동쪽");
 			c = c.replace(/The NE/g, "북동쪽");
 			c = c.replace(/Dominator is now controlled by/g, " 점령지가 ");
-			c = c.replace(/BLUE/g, "빨강팀");
-			c = c.replace(/RED/g, "파랑팀");
+			c = c.replace(/BLUE/g, "파랑팀");
+			c = c.replace(/RED/g, 빨강팀"");
 			c += " 에 의해 점령되었습니다."
+		}
+		if (/ has destroyed /g.test(c)) {
+			c = c.replace(/ has destroyed /g, "이");
+			c = c.replace(/BLUE/g, "파랑팀");
+			c = c.replace(/RED/g, 빨강팀"");
+			c = c.replace(/'s Mothership!/g, "의 모선을 죽였습니다!");
 		}
 		if (/Auto Fire/g.test(c)) {
 			c = c.replace(/Auto Fire/g, "자동 사격");
