@@ -1174,11 +1174,6 @@
 				c = "Diep.io";
 				break;
 		}
-		c = c.replace(/Game mode/g, "게임 모드");
-		c = c.replace(/FFA/g, "개인전");
-		c = c.replace(/Team DM/g, "팀 점령전");
-		c = c.replace(/Domination/g, "점령전");
-		c = c.replace(/Mothership/g, "모선전");
 		c = c.replace(/Last updated/g, "최근 업데이트");
 		c = c.replace(/Score:/g, "점수:");
 		c = c.replace(/Scoreboard/g, "순위");
@@ -1190,6 +1185,14 @@
 		c = c.replace(/they seem to prefer to keep an air of mystery about them/g, "they seem to prefer to keep an air of mystery about them");
 		c = c.replace(/You were killed by:/g,"당신을 죽인 탱크는");
 
+		if (/Game mode:/g.test(c)) {
+			c = c.replace(/Game mode:/g, "게임 모드");
+			c = c.replace(/FFA/g, "개인전");
+			c = c.replace(/Team DM/g, "팀 점령전");
+			c = c.replace(/Domination/g, "점령전");
+			c = c.replace(/Mothership/g, "모선전");
+		}
+		
 		if (/You will spawn at level/g.test(c)) {
 			c = c.replace(/You will spawn at level/g, "");
 			c += "레벨로 시작합니다.";
@@ -1208,7 +1211,7 @@
 			c = c.replace(/The NE/g, "북동쪽");
 			c = c.replace(/Dominator is now controlled by/g, " 점령지가 ");
 			c = c.replace(/BLUE/g, "파랑팀");
-			c = c.replace(/RED/g, 빨강팀"");
+			c = c.replace(/RED/g, "빨강팀");
 			c += " 에 의해 점령되었습니다."
 		}
 		if (/ has destroyed /g.test(c)) {
