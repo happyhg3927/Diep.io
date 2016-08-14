@@ -1211,7 +1211,7 @@
 			c = c.replace(/The NE/g, "북동쪽");
 			c = c.replace(/Dominator is now controlled by/g, " 점령지가 ");
 			c = c.replace(/BLUE/g, "파랑팀");
-			c = c.replace(/RED/g, 빨강팀"");
+			c = c.replace(/RED/g, "빨강팀");
 			c += " 에 의해 점령되었습니다."
 		}
 		if (/ has destroyed /g.test(c)) {
