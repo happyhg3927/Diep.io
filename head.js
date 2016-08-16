@@ -451,6 +451,8 @@
 	};
 **/
 
+	window.WebSocket.prototype = _WS.prototype;
+	
 	// _ws.__defineSetter__("onmessage", function(data){
 	//     console.log(data);
 	//     _wsOnmessage.call(this, data);
