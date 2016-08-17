@@ -1219,7 +1219,7 @@
 		if (/ has destroyed /g.test(c)) {
 			c = c.replace(/ has destroyed /g, "이");
 			c = c.replace(/BLUE/g, "파랑팀");
-			c = c.replace(/RED/g, 빨강팀"");
+			c = c.replace(/RED/g, "빨강팀");
 			c = c.replace(/'s Mothership!/g, "의 모선을 죽였습니다!");
 		}
 		if (/Auto Fire/g.test(c)) {
